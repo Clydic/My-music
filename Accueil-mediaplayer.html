@@ -26,17 +26,18 @@
         </div>
         <div id="maindiv" class="shadow p-3 bg-body rounded">
             <header >
+                <audio controls src="assets\data\media\Stay_With_You.mp3"></audio>
                 <div id="controlers"  class="d-flex flex-wrap align-item-strech">
                     <div id="control"class="d-flex flex-wrap my-2">
                         <button class="btn btn-primary m-auto" type="button" value="previous"><i class="fas fa-chevron-circle-left"></i></button>
-                        <button class="btn btn-primary m-auto" type="button" id="play"  value="play"><i class="fas fa-play-circle"></i></button>
+                        <button class="btn btn-primary m-auto" type="button" id="play"  value="play"><i id="playpause" class="fas fa-play-circle"></i></button>
                         <button class="btn btn-primary m-auto" type="button" value="next"><i class="fas fa-chevron-circle-right"></i></button>
                       
                     </div>
                     <div id="sound"class="d-flex flex-wrap flex-row my-2">
-                        <button class="btn btn-primary m-auto btn-sm m-auto" type="button" value="up speaker"><i class="fas fa-volume-down"></i></button>
-                        <input class="m-auto" type="range" id="volume"/>
-                        <button class="btn btn-primary m-auto btn-sm" type="button" value="down speaker"><i class="fas fa-volume-up"></i></button>
+                        <button class="btn btn-primary m-auto btn-sm m-auto" type="button" value="down speaker" id="speakdown"><i class="fas fa-volume-down"></i></button>
+                        <input class="m-auto" type="range" min="0" max="1" step="0.05" id="volume"/>
+                        <button class="btn btn-primary m-auto btn-sm" type="button" value="up speaker" id="speakup"> <i class="fas fa-volume-up"></i></button>
                 
                     </div>
                 </div>
@@ -47,7 +48,7 @@
                     <p class="m-auto bg-light rounded-1 mb-1" id = "titre">Titre de la chanson</p>
                     <!-- <input type="range" id="progression"> -->
                     
-                    <input class="form-range" type="range"  id="customRange1">
+                    <input class="form-range" type="range"  id="progresstime" min="0" max="3" step=0.1>
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
                         <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="addon-wrapping">
@@ -114,4 +115,5 @@
     </div>
 </body>
 <script src="assets/JS/bootstrap.bundle.min.js"></script>
+<script src="assets/JS/script.js"></script>
 </html>
