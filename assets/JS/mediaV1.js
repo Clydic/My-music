@@ -7,10 +7,3 @@ var media = [
 	{file : 'Stay_With_You', name : 'Stay With You'},
 	{file : 'Symphony_No_5_by_Beethoven', name : 'Symphony No 5 by Beethoven'}
 ];
-function changeIcon(){
-    if(titre.paused){
-        iconPlayPause.setAttribute("class" , "fas fa-play-circle");
-    }else{
-        iconPlayPause.setAttribute("class" , "fas fa-pause-circle");
-    }
-};
