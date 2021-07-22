@@ -13,7 +13,10 @@ rangeTime.value=0;
 var duree = titre.duration;
 rangeTime.setAttribute("max" , duree);
 speaker.value = titre.volume;
-play.addEventListener("click", function(){playAndPause; if(titre.paused){titre.play()}else{titre.pause()})
+play.addEventListener("click", function(){ playAndPause();
+if(titre.paused){titre.play()} 
+else{titre.pause()}
+})
 
 btnSpeakDown.addEventListener("click" , function(){speaker.stepDown();
     titre.volume = speaker.value;
@@ -40,13 +43,13 @@ var actualTime = -1;
 function playAndPause(){
     
     if(titre.paused ){
-        actualTime = setInterval(upDateTime,100);
-        // 
+        
+        clearInterval(actualTime);
         iconPlayPause.setAttribute("class" , "fas fa-play-circle");
     }else{
         iconPlayPause.setAttribute("class" , "fas fa-pause-circle");
-        // titre.pause();
-        clearInterval(actualTime);
+        actualTime = setInterval(upDateTime,100);
+        
         
     }
 }
