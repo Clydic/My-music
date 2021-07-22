@@ -1,3 +1,3 @@
 # My-music
 
-An alication of a mediaplayer
+An application of a mediaplayer
