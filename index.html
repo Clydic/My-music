@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛑 Change me</title>
+    
+    <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/all.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    
+    <meta name="description" content="🛑 Change me (up to ~155 characters)">
+    
+</head>
+<body>
+    <div id="wrapper" >
+        <div class="alert alert-danger d-sm-none" role="alert">extra small</div>
+        <div class="alert alert-primary d-none d-sm-flex d-md-none" role="alert">
+            small
+        </div>
+        <div class="alert alert-success d-none d-md-flex d-lg-none"role="alert">
+            medium
+        </div>
+        <div class="alert alert-warning d-none d-lg-flex" role="alert">
+            large
+        </div>
+        <div id="maindiv" class="shadow p-3 bg-body rounded">
+            <header >
+                <div id="controlers"  class="d-flex flex-wrap align-item-strech">
+                    <div id="control"class="d-flex flex-wrap my-2">
+                        <button class="btn btn-primary m-auto" type="button" value="previous"><i class="fas fa-chevron-circle-left"></i></button>
+                        <button class="btn btn-primary m-auto" type="button" id="play"  value="play"><i class="fas fa-play-circle"></i></button>
+                        <button class="btn btn-primary m-auto" type="button" value="next"><i class="fas fa-chevron-circle-right"></i></button>
+                      
+                    </div>
+                    <div id="sound"class="d-flex flex-wrap flex-row my-2">
+                        <button class="btn btn-primary m-auto btn-sm m-auto" type="button" value="up speaker"><i class="fas fa-volume-down"></i></button>
+                        <input class="m-auto" type="range" id="volume"/>
+                        <button class="btn btn-primary m-auto btn-sm" type="button" value="down speaker"><i class="fas fa-volume-up"></i></button>
+                
+                    </div>
+                </div>
+                
+            
+                <div class="m-auto" id="search">
+                    <p class="m-auto fs-2 bg-light rounded-1 mb-1" id = "artiste">Nom artiste</p>
+                    <p class="m-auto bg-light rounded-1 mb-1" id = "titre">Titre de la chanson</p>
+                    <!-- <input type="range" id="progression"> -->
+                    
+                    <input class="form-range" type="range"  id="customRange1">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="addon-wrapping">
+                    </div>    
+                </div>
+            </header>
+            <main>
+                <nav class="bg-light mb-2">
+                    <ul class="list-group">
+                        <li class="list-group-item text-dark">Music</li>
+                        <li class="list-group-item text-dark">Videos</li>
+                        <li class="list-group-item text-dark">Podcasts</li>
+                       
+                      </ul>
+                   
+                </nav>
+                <div class="d-flex flex-column" id="divpochette">
+                    <div class="pochette">
+                        <img  src="assets/data/pochettes/150/1.jpg" alt="-_1"/>
+                    <div class="card-body bg-light rounded-1">
+                        <h5 class="card-title">UN</h5>
+                        <p class="card-text">Voici la Chanson UN</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="pochette">
+                         <img  src="assets/data/pochettes/150/2.jpg" alt="-_1"/>
+                    <div class="card-body bg-light rounded-1">
+                        <h5 class="card-title">DEUX</h5>
+                        <p class="card-text">Voici la Chanson DEUX</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="pochette">
+                        <img  src="assets/data/pochettes/150/3.jpg" alt="-_1"/>
+                    <div class="card-body bg-light rounded-1">
+                        <h5 class="card-title">TROIS</h5>
+                        <p class="card-text">Voici la Chanson TROIS</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="pochette">
+                         <img  src="assets/data/pochettes/150/4.jpg" alt="-_1"/>
+                    <div class="card-body bg-light rounded-1">
+                        <h5 class="card-title">QUATRE</h5>
+                        <p class="card-text">Voici la Chanson QUATRE</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="pochette">
+                        <img src="assets/data/pochettes/150/5.jpg" alt="-_1"/>
+                    <div class="card-body bg-light rounded-1">
+                        <h5 class="card-title">CINQ</h5>
+                        <p class="card-text">Voici la Chanson CINQ</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                    
+
+                </div>
+                
+            </main>
+        </div>
+    </div>
+</body>
+<script src="assets/JS/bootstrap.bundle.min.js"></script>
+</html>
