@@ -21,6 +21,11 @@
 .form-range::-moz-range-track{
     background-color: #d33682;
 }
+
+.pochette {
+  width:45%;
+}
+
 /*Apprence cursor volume et barre*/
 #volume::-moz-range-track{
     background-color: crimson;
@@ -92,3 +97,10 @@
     background:#ffffff;
     cursor: pointer;
   }
+  @media (max-width: 640px) {
+    main{
+      display: flex;
+    }
+  }
+    
+  
