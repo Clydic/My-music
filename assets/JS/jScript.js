@@ -153,7 +153,7 @@ $(function(){
      */
     function createPochette(){
     
-        var classPochette = "pochette d-flex flex-column m-1  col-xs-6 col-md-4 col-lg-3"
+        var classPochette = "d-flex flex-column mb-2 col-6 col-md-4 col-lg-3"
     
         var id = "#divpochette"
         for(i in media){

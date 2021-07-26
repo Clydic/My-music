@@ -97,10 +97,6 @@
     background:#ffffff;
     cursor: pointer;
   }
-  @media (max-width: 640px) {
-    main{
-      display: flex;
-    }
-  }
+ 
     
   
