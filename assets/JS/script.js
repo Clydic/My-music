@@ -26,7 +26,7 @@ rangeTime.setAttribute("max",titre.duration)
 rangeTime.value=0;
 speaker.value = titre.volume;
 
-play.addEventListener("click", function(){ changeIcone();
+play.addEventListener("click", function(){ changeIconePLay();
                                             if(titre.paused){titre.play()} 
                                             else{titre.pause()}
 });
@@ -42,23 +42,26 @@ btnSpeakUp.addEventListener("click" , function(){speaker.stepUp();
 //Ajout de l'évènement change au curseur de volume afin de gérer celui-ci
 speaker.addEventListener("change",function(e){titre.volume = e.target.value;});
 
-// rangeTime.addEventListener("change",function(e){titre.currentTime = parseFloat(e.target.value);});
 
-
-titre.addEventListener("play", changeIcone);
-titre.addEventListener("pause",changeIcone);
+//Assignation des évènement play and pause et mise à jour  du curseur de progression de musique
+titre.addEventListener("play", changeIconePLay);
+titre.addEventListener("pause",changeIconePLay);
 titre.addEventListener("timeupdate", function(){rangeTime.value=titre.currentTime.toString();});
-// titre.addEventListener("volumechange",function(){speaker.value=titre.volume});
 
 
+//Assignation des évènement lick aux bouton chanson précédente et suivante
 btnPrevious.addEventListener("click",previous);
 btnNxt.addEventListener("click",next);
 
 
 
 
-
-function changeIcone(){
+// Change l'Icone du bouton de lecture
+/**
+ * IN:Void
+ * OUT:Void
+ */
+function changeIconePLay(){
     
     if(titre.paused ){
         
@@ -73,18 +76,29 @@ function changeIcone(){
     }
 }
 
+//Change la musique actuelle par une musique à l'indexe donné
+/**
+ * 
+ * @param {number} index 
+ */
 function changeMusic(index){
     var music = aMedia[index];
     titre.setAttribute("src",path+"/"+music["file"]+".mp3");
     document.getElementById("artiste").innerHTML = music["artist"];
     document.getElementById("titre").innerHTML = music["name"];
     titre.load();
-    changeIcone();
+    changeIconePLay();
    
 
 
 }    
-
+/**
+ * Récupère l'indice d'un élément donné par son array, sa clé et sa valeur.
+ * @param {Array} array 
+ * @param {String} key 
+ * @param {String} word 
+ * @returns {Int} 
+ */
 function getIndex (array , key , word){
     for (i in array){
         if (array[i][key] == word){
@@ -94,7 +108,11 @@ function getIndex (array , key , word){
     }
 }
 
-
+/**
+ * Modifie la musique actuel par la précédente dasn la liste
+ * @param Void
+ * @returns None
+ */
 function previous(){
     // var nom = titre.getAttribute("name")
     var index = getIndex(aMedia , "name" , titre.getAttribute("name"))
@@ -110,7 +128,11 @@ function previous(){
     
 
 }
-
+/**
+ * Modifie la musique actuel par la suivante dans la liste
+ * @param Void
+ * @returns None
+ */
 function next(){
     var index = getIndex(aMedia , "name" , titre.getAttribute("name"))
     if(index<aMedia.length-1){
@@ -120,7 +142,11 @@ function next(){
         titre.autoplay=true;
     }
 }
-
+/**
+ * Crée les pochettes des musiques à partir du tableau Media.
+ * @param None
+ * 
+ */
 function createPochette(){
    
     var classPochette = "pochette d-flex flex-column m-1  col-xs-6 col-md-4 col-lg-3"
@@ -166,21 +192,19 @@ function createPochette(){
     
     
 }
-
+/**
+ * 
+ * @param {Event} event 
+ */
 function pickMusic(event){
     var index = getIndex(aMedia , "name", event.target.name);
     changeMusic(index);
     titre.autoplay=true;
 
 }
+/**
+ * Lance la fonction Pochette
+ */
 createPochette();
-{/* <div class="pochette d-flex flex-column m-1 col-1">
-                         <img  src="assets/data/pochettes/150/2.jpg" alt="-_1"/>
-                        <div class="card-body bg-light rounded-1">
-                            <h5 class="card-title">DEUX</h5>
-                            <p class="card-text">Voici la Chanson DEUX</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div> */}
 
                   
