@@ -109,8 +109,8 @@ function getIndex (array , key , word){
 }
 
 /**
- * Modifie la musique actuel par la précédente dasn la liste
- * @param Void
+ * Modifie la musique actuel par la précédente dans la liste
+ * @param None
  * @returns None
  */
 function previous(){
