@@ -31,7 +31,7 @@ play.addEventListener("click", function(){ changeIconePLay();
                                             else{titre.pause()}
 });
 
-//Assignation des évènements
+/*--------------Assignation des évènements---------------*/
 //Assignation de l'évènement click au bouton pour Baisser le volume
 btnSpeakDown.addEventListener("click" , function(){speaker.stepDown();
                                                     titre.volume = speaker.value;});
@@ -54,7 +54,7 @@ btnPrevious.addEventListener("click",previous);
 btnNxt.addEventListener("click",next);
 
 
-
+/*------------Fonctions--------------- */
 
 // Change l'Icone du bouton de lecture
 /**
