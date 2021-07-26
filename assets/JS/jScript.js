@@ -106,7 +106,7 @@ $(function(){
     function getIndex (array , key , word){
         for (i in array){
             if (array[i][key] == word){
-                console.log(i);
+               
                 return parseInt(i);
             }
         }
