@@ -81,7 +81,7 @@ function changeIconePLay(){
  * 
  * @param {number} index 
  */
-function changeMusic(index){
+function loadMusic(index){
     var music = aMedia[index];
     titre.setAttribute("src",path+"/"+music["file"]+".mp3");
     document.getElementById("artiste").innerHTML = music["artist"];
@@ -117,7 +117,7 @@ function previous(){
     // var nom = titre.getAttribute("name")
     var index = getIndex(aMedia , "name" , titre.getAttribute("name"))
     if(index>0){
-        changeMusic(index-1);
+        loadMusic(index-1);
         titre.setAttribute("name",aMedia[index-1]["name"]);
         rangeTime.value="0"
         titre.autoplay=true;
@@ -136,7 +136,7 @@ function previous(){
 function next(){
     var index = getIndex(aMedia , "name" , titre.getAttribute("name"))
     if(index<aMedia.length-1){
-        changeMusic(index+1);
+        loadMusic(index+1);
         titre.setAttribute("name",aMedia[index+1]["name"]);
         rangeTime.value="0"
         titre.autoplay=true;
@@ -198,7 +198,7 @@ function createPochette(){
  */
 function pickMusic(event){
     var index = getIndex(aMedia , "name", event.target.name);
-    changeMusic(index);
+    loadMusic(index);
     titre.autoplay=true;
 
 }
