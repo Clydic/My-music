@@ -25,9 +25,9 @@
             large
         </div>
         <div id="maindiv" class="shadow p-3 bg-body rounded">
-            <header >
+            <header class="d-flex flex-column flex-sm-row">
                 <audio src= "assets/data/media/Blue_Skies.mp3" name="Blue Skies" ></audio>
-                <div id="controlers"  class="d-flex flex-wrap align-item-strech">
+                <div id="controlers"  class="d-flex flex-wrap align-item-strech w-100">
                     <div id="control"class="d-flex flex-wrap my-2">
                         <button class="btn btn-primary m-auto w-33" type="button" id="previous"><i class="fas fa-chevron-circle-left"></i></button>
                         <button class="btn btn-primary m-auto w-33" type="button" id="play"  value="play"><i id="playpause" class="fas fa-play-circle"></i></button>
@@ -43,13 +43,17 @@
                 </div>
                 
             
-                <div class="m-auto" id="search">
-                    <p class="m-auto fs-2 bg-light rounded-1 mb-1" id = "artiste">Nom artiste</p>
-                    <p class="m-auto bg-light rounded-1 mb-1" id = "titre">Titre de la chanson</p>
-                    <!-- <input type="range" id="progression"> -->
-                    <!-- je test le pull git -->
-                    <input class="form-range" type="range"  id="progresstime" min="0" max="3" step=0.1>
-                    <div class="input-group flex-nowrap">
+                <div class="m-auto d-flex flex-column flex-sm-row w-100" id="search">
+                    <div>
+
+                   
+                        <p class="m-auto fs-2 bg-light rounded-1 mb-1" id = "artiste">Nom artiste</p>
+                        <p class="m-auto bg-light rounded-1 mb-1" id = "titre">Titre de la chanson</p>
+                        <!-- <input type="range" id="progression"> -->
+                        <!-- je test le pull git -->
+                        <input class="form-range" type="range"  id="progresstime" min="0" max="3" step=0.1>
+                    </div>  
+                    <div class="input-group flex-nowrap h-25 align-self-center w-50">
                         <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
                         <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="addon-wrapping">
                     </div>    
